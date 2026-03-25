@@ -32,6 +32,36 @@
 //     }
 // }
 
+// import java.io.BufferedReader;
+// import java.io.IOException;
+// import java.io.InputStreamReader;
+
+// public class Demo{
+//     public static void main(String args[]) throws IOException{
+
+//         int i = 0;
+//         int j = 400;
+//         BufferedReader bf= null;
+
+//         try{
+//           InputStreamReader in = new InputStreamReader(System.in);
+//           bf  = new BufferedReader(in);
+
+//           int num = Integer.parseInt(bf.readLine());
+
+//           int ans = j / num;
+//           System.out.println(ans);
+//         }
+//         catch(Exception e){
+//             System.out.println("something went wrong : " + e);
+//         }
+//         finally{
+//             System.out.println("finally is used to close the connection");
+//             bf.close();
+//         }
+//     }
+// }
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -39,25 +69,11 @@ import java.io.InputStreamReader;
 public class Demo{
     public static void main(String args[]) throws IOException{
 
-        int i = 0;
-        int j = 400;
-        BufferedReader bf= null;
+        try(BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))){
+            int num  = Integer.parseInt(bf.readLine());
 
-        try{
-          InputStreamReader in = new InputStreamReader(System.in);
-          bf  = new BufferedReader(in);
+            System.out.println(num);
 
-          int num = Integer.parseInt(bf.readLine());
-
-          int ans = j / num;
-          System.out.println(ans);
-        }
-        catch(Exception e){
-            System.out.println("something went wrong : " + e);
-        }
-        finally{
-            System.out.println("finally is used to close the connection");
-            bf.close();
         }
     }
 }
