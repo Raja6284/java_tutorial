@@ -28,3 +28,30 @@ public class Demo {
         }
     }
 }
+
+
+// class A{
+//     public void show(){
+//         System.out.println("in A show");
+//     }
+// }
+
+// class B extends A{
+//     public void show(){
+//         System.out.println("in B show");
+//     }
+// }
+
+
+// public class Demo {
+
+//     public static void main(String args[]){
+//         A obj = new A();
+//         A obj1 = new B();
+//         B obj2 = new B();
+       
+//         obj.show();
+//         obj1.show();
+//         obj2.show();
+//     }
+// }
