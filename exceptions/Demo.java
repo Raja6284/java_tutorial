@@ -1,4 +1,10 @@
 
+class RajaException extends Exception{
+
+    public RajaException(String string){
+        super(string);
+    }
+}
 
 public class Demo{
     public static void main(String args[]){
@@ -14,13 +20,16 @@ public class Demo{
         try{
             ans = j/i;
 
-            if(ans == 0)
-                    throw new ArithmeticException("this is the default messgae");
+            if(ans == 0){
+                //throw new ArithmeticException("this is the default messgae");
+                throw new RajaException("this is a custom exception message");
+            }
+                    
             //System.out.println(nums[1]);
             //System.out.println(nums[5]);
             //System.out.println(str.length());
         }
-        catch(ArithmeticException e){
+        catch(RajaException e){
             System.out.println("Cannot divide by zero " + e);
         }
         catch(ArrayIndexOutOfBoundsException e){
