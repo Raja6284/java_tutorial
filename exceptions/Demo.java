@@ -1,9 +1,10 @@
 
+
 public class Demo{
     public static void main(String args[]){
 
-        int i = 0;
-        int j = 12;
+        int i = 12;
+        int j = 0;
 
         int ans = 0;
 
@@ -11,10 +12,13 @@ public class Demo{
         String str = null;
 
         try{
-            //ans = j/i;
-            System.out.println(nums[1]);
+            ans = j/i;
+
+            if(ans == 0)
+                    throw new ArithmeticException("this is the default messgae");
+            //System.out.println(nums[1]);
             //System.out.println(nums[5]);
-            System.out.println(str.length());
+            //System.out.println(str.length());
         }
         catch(ArithmeticException e){
             System.out.println("Cannot divide by zero " + e);
