@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.*;
 
 public class Demo{
@@ -30,14 +28,28 @@ public class Demo{
             random.add((int)(Math.random()*100));
         }
 
-        System.out.println(random.size());
+        //System.out.println(random.size());
 
         // for(int i = 0; i<random.size(); i++){
         //     System.out.println(random.get(i));
         // }
 
-        System.out.println(random);
+        //System.out.println(random);
        //System.out.println(nums);
-        
+
+
+       //Set<Integer> apnaSet = new HashSet<Integer>();
+        Set<Integer> apnaSet = new TreeSet<Integer>();
+
+       for(int i = 0; i<1000; i++){
+        apnaSet.add((int)(Math.random()*1000));
+       }
+       
+       System.out.println(apnaSet.size());
+       System.out.println(apnaSet);
+
+    //    for(int n : apnaSet){
+    //     System.out.println(n);
+    //    }
     }
 }
