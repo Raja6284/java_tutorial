@@ -41,15 +41,44 @@ public class Demo{
        //Set<Integer> apnaSet = new HashSet<Integer>();
         Set<Integer> apnaSet = new TreeSet<Integer>();
 
-       for(int i = 0; i<1000; i++){
+       for(int i = 0; i<10; i++){
         apnaSet.add((int)(Math.random()*1000));
        }
        
-       System.out.println(apnaSet.size());
-       System.out.println(apnaSet);
+       //System.out.println(apnaSet.size());
+
+       Iterator<Integer> values = apnaSet.iterator();
+
+    //    while(values.hasNext()){
+    //     System.out.println(values.next());
+    //    }
+
+       //System.out.println(apnaSet);
 
     //    for(int n : apnaSet){
     //     System.out.println(n);
     //    }
+
+       Map<String,Integer> m = new HashMap<>();
+
+       m.put("Raja",500);
+       m.put("Sagar",5000);
+       m.put("Pratham",5000);
+       m.put("Satyanshu",5000);
+
+
+
+       System.out.println(m.get("Raja"));
+
+       System.out.println(m.keySet());
+
+       Set<String> ss = new HashSet<>(m.keySet());
+
+       System.out.println(ss);
+
+       for(String key : ss){
+        System.out.println(key + " : " + m.get(key));
+       }
+
     }
 }
