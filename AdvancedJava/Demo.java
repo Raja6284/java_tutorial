@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class Demo{
     public static void main(String args[]){
@@ -13,7 +14,23 @@ public class Demo{
             }
         };
 
-        nums.forEach(con);
+        
+
+        Stream<Integer> ss = nums.stream();
+        Stream<Integer> s1 = ss.filter(n -> n%2==0);
+        Stream<Integer> s2 = s1.map(n -> n*2);
+        int result = s2.reduce(0, (c,e) -> c+e );
+
+        //s2.forEach(con);
+
+        System.out.println(result);
+
+        int result2 = nums.stream()
+                            .filter(n -> n%2==0)
+                                .map(n -> n*2)
+                                    .reduce(0,(c,e)->c+e);
+
+        System.out.println(result2);
 
         // for(int i = 0; i<nums.size(); i++){
         //     System.out.println(nums.get(i));
